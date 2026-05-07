@@ -1,0 +1,127 @@
+{
+  "product": "media-delivery-preflight-suite",
+  "title": "メディア納品プリフライトスイート",
+  "benchmarkRepos": [
+    "Sunmax0731/movie-telop-transcriber",
+    "Sunmax0731/codex-remote-android"
+  ],
+  "requiredFields": [
+    "filePath",
+    "format",
+    "width",
+    "height",
+    "deliveryPreset"
+  ],
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "purpose": "メディア属性、納品プリセット、変換前チェックの正常入力を確認する",
+      "input": {
+        "items": [
+          {
+            "id": "media-delivery-preflight-suite-happy",
+            "title": "メディア納品プリフライトスイート happy",
+            "filePath": "samples/product.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1200,
+            "deliveryPreset": "EC main image",
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "purpose": "必須項目不足をerrorとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "media-delivery-preflight-suite-missing-required",
+            "title": "メディア納品プリフライトスイート missing-required",
+            "format": "png",
+            "width": 1200,
+            "height": 1200,
+            "deliveryPreset": "EC main image",
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "blocked-status",
+      "purpose": "blocked状態をwarningとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "media-delivery-preflight-suite-blocked",
+            "title": "メディア納品プリフライトスイート blocked",
+            "filePath": "samples/product.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1200,
+            "deliveryPreset": "EC main image",
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "purpose": "正常、必須不足、警告を同一バッチで集計する",
+      "input": {
+        "items": [
+          {
+            "id": "media-delivery-preflight-suite-happy",
+            "title": "メディア納品プリフライトスイート happy",
+            "filePath": "samples/product.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1200,
+            "deliveryPreset": "EC main image",
+            "status": "ready"
+          },
+          {
+            "id": "media-delivery-preflight-suite-missing-required",
+            "title": "メディア納品プリフライトスイート missing-required",
+            "format": "png",
+            "width": 1200,
+            "height": 1200,
+            "deliveryPreset": "EC main image",
+            "status": "ready"
+          },
+          {
+            "id": "media-delivery-preflight-suite-blocked",
+            "title": "メディア納品プリフライトスイート blocked",
+            "filePath": "samples/product.png",
+            "format": "png",
+            "width": 1200,
+            "height": 1200,
+            "deliveryPreset": "EC main image",
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 1
+      }
+    }
+  ]
+}
