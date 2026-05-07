@@ -10,10 +10,10 @@ test('review model exposes status cards and next actions', () => {
   "format": "png",
   "width": 1200,
   "height": 1200,
-  "deliveryPreset": "BOOTH main image"
+  "deliveryPreset": "EC main image"
 }] });
   const model = buildReviewModel(report);
-  assert.equal(model.statusLabel, '要修正');
+  assert.equal(model.statusLabel, '修正が必要');
   assert.ok(model.completionRate < 100);
   assert.ok(model.cards.length >= 4);
   assert.match(renderHtmlReport(report), /Next Actions/);

@@ -2,13 +2,13 @@
   "items": [
     {
       "id": "media-delivery-preflight-suite-1",
-      "title": "メディア納品前チェックスイート サンプル 1",
+      "title": "メディア納品プリフライトスイート サンプル1",
       "status": "ready",
       "filePath": "samples/product.png",
       "format": "png",
       "width": 1200,
       "height": 1200,
-      "deliveryPreset": "BOOTH main image"
+      "deliveryPreset": "EC main image"
     },
     {
       "id": "media-delivery-preflight-suite-missing-required",
@@ -17,7 +17,7 @@
       "format": "png",
       "width": 1200,
       "height": 1200,
-      "deliveryPreset": "BOOTH main image"
+      "deliveryPreset": "EC main image"
     }
   ]
 }
