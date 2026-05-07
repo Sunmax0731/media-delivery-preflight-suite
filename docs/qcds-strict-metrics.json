@@ -191,7 +191,7 @@
           "description": "docs ZIPが生成済みである",
           "kind": "zip",
           "pass": true,
-          "detail": "media-delivery-preflight-suite-docs.zip 10056 bytes"
+          "detail": "media-delivery-preflight-suite-docs.zip exists and exceeds minimum size"
         }
       ]
     },
