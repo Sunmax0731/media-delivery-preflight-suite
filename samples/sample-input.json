@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "id": "media-1",
+      "title": "メディア納品前チェックスイート サンプル 1",
+      "filePath": "samples/product.png",
+      "format": "png",
+      "width": 1200,
+      "height": 1200,
+      "deliveryPreset": "BOOTH main image"
+    },
+    {
+      "id": "media-missing-required",
+      "title": "必須項目不足サンプル",
+      "format": "png",
+      "width": 1200,
+      "height": 1200,
+      "deliveryPreset": "BOOTH main image"
+    }
+  ]
+}
