@@ -5,9 +5,11 @@
   "type": "module",
   "description": "画像、動画、ZIPなどの納品前メディアを形式・寸法・プリセット単位で確認する。",
   "scripts": {
-    "test": "node --test tests/*.test.mjs && node tools/qcds-evaluate.mjs",
+    "test": "node --test tests/*.test.mjs && node tools/qcds-evaluate.mjs && node tools/platform-runtime-gate.mjs && node tools/closed-alpha-guard.mjs",
     "validate": "npm test",
-    "start": "node src/cli.mjs samples/sample-input.json dist/run"
+    "start": "node src/cli.mjs samples/sample-input.json dist/run",
+    "platform:gate": "node tools/platform-runtime-gate.mjs",
+    "closed-alpha:guard": "node tools/closed-alpha-guard.mjs"
   },
   "keywords": [
     "windowsapp",

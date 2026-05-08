@@ -1,0 +1,8 @@
+{
+  "product": "media-delivery-preflight-suite",
+  "platformType": "windows-local-app",
+  "pass": true,
+  "method": "runtime-gate",
+  "manualTest": "not-run-by-codex",
+  "packageTest": true
+}
