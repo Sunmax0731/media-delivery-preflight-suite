@@ -1,0 +1,11 @@
+{
+  "product": "media-delivery-preflight-suite",
+  "title": "メディア納品前チェックスイート",
+  "domain": "WindowsApp",
+  "ideaNo": 4,
+  "platformType": "windows-local-app",
+  "expectedPublicTarget": "GitHub Release / BOOTH",
+  "browser": null,
+  "android": null,
+  "evidence": "dist/platform-runtime-gate-result.json"
+}

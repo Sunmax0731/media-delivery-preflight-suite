@@ -1,0 +1,32 @@
+{
+  "product": "media-delivery-preflight-suite",
+  "repository": "Sunmax0731/media-delivery-preflight-suite",
+  "githubUrl": "https://github.com/Sunmax0731/media-delivery-preflight-suite",
+  "tag": "v0.1.0-alpha.1",
+  "releaseUrl": "https://github.com/Sunmax0731/media-delivery-preflight-suite/releases/tag/v0.1.0-alpha.1",
+  "prerelease": true,
+  "latest": false,
+  "assetCount": 3,
+  "assets": [
+    "media-delivery-preflight-suite-docs.zip",
+    "manual-test.md",
+    "strict-manual-test-addendum.md"
+  ],
+  "platformRuntimeGate": "dist/platform-runtime-gate-result.json",
+  "platformType": "windows-local-app",
+  "manualTest": "not-run-by-codex",
+  "qcdsEvaluation": {
+    "Quality": "S-",
+    "Cost": "S-",
+    "Delivery": "S-",
+    "Satisfaction": "S-",
+    "capReason": "manual-test-not-run-by-codex"
+  },
+  "github": {
+    "repo": "Sunmax0731/media-delivery-preflight-suite",
+    "url": "https://github.com/Sunmax0731/media-delivery-preflight-suite",
+    "releaseUrl": "https://github.com/Sunmax0731/media-delivery-preflight-suite/releases/tag/v0.1.0-alpha.1",
+    "prerelease": true,
+    "latest": false
+  }
+}
